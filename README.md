@@ -1,2 +1,3 @@
 # lottie-splash
-Xamarin.FormsでLottieをスプラッシュスクリーンに適用する。
+https://www.project-respite.com/lottie-xamarin-forms/
+を実際にやってみたコード
