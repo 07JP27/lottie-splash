@@ -1,5 +1,6 @@
 ﻿using System;
 using Airbnb.Lottie;
+using CoreGraphics;
 using UIKit;
 
 namespace lottietest.iOS
@@ -14,6 +15,10 @@ namespace lottietest.iOS
         {
             base.ViewDidLoad();
             var animationView = LOTAnimationView.AnimationNamed("loading_gears");
+            var boundSize = UIScreen.MainScreen.Bounds.Size;
+            animationView.Frame = new CGRect(x: 0, y: 0, width: boundSize.Width, height: boundSize.Height);
+            animationView.ContentMode = UIViewContentMode.ScaleAspectFit;
+
             this.View.AddSubview(animationView);
             animationView.PlayWithCompletion((animationFinished) =>
             {
